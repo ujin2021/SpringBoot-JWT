@@ -15,7 +15,7 @@ import java.util.Set;
 @NoArgsConstructor
 public class User {
 
-    @JsonIgnore
+    @JsonIgnore // serialize, deserialize 무시
     @Id // pk
     @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 자동증가

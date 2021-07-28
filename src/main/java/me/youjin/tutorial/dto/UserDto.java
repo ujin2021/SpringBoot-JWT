@@ -17,7 +17,8 @@ public class UserDto {
     @Size(min = 3, max = 50)
     private String username;
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    // JsonProperty access 참고 : https://eglowc.tistory.com/28
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) // deserialize 시 에만 접근 가능
     @NotNull
     @Size(min = 3, max = 100)
     private String password;
