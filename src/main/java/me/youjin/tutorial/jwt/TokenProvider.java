@@ -90,7 +90,7 @@ public class TokenProvider implements InitializingBean {
         return new UsernamePasswordAuthenticationToken(principal, token, authorities);
     }
 
-    // toekn을 파라미터로 받아 유효성 검증을 수행하는 메소드
+    // token을 파라미터로 받아 유효성 검증을 수행하는 메소드
     public boolean validateToken(String token) {
         try {
             Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
