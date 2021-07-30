@@ -14,6 +14,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+// 추가적인 설정을 위해 WebSecurityConfigurer를 implements 하거나 WebSecurityConfigurerAdapter를 extends할 수 있다
 @EnableWebSecurity // 기본적인 web 보안을 활성화 하겠다
 @EnableGlobalMethodSecurity(prePostEnabled = true) // @PreAuthorize annotation을 메소드 단위로 추가하기 위해 적용
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
